@@ -1,2 +1,2 @@
-# isOurGovernmentPopular
-checks twitter to see if government is popular right now and if it is, display the popularity level
+# US Government Sentiment Analysis
+checks twitter to see if people are talking postively to each other on government topics
