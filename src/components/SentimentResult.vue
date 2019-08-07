@@ -1,6 +1,6 @@
 <template>
 <div id="sentiment-result">
-	<div v-if=sentiment.loading class="loading-sentiment">Grabbing Data...</div>
+	<div v-if=sentiment.loading class="loading-sentiment">Getting Tweets and calculating sentiment...</div>
 	<div class="results-container" v-else>
 		<div class="result-summary">
 			{{ summary }}
@@ -77,8 +77,14 @@ export default {
 .loading-sentiment {
 	font-size: 32px;
 	margin-bottom: 40px;
-	text-transform: uppercase;
-	animation: pulse 3s infinite linear;
+	animation: pulse 2s infinite ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 300px;
+	width: 80%;
+	margin: 0 auto;
+	color: rgba(10, 10, 10, .5);
 }
 
 .result-summary {
@@ -138,7 +144,7 @@ export default {
 	}
 
 	50% {
-		transform: scale(1.2);
+		transform: scale(1.1);
 	}
 
 	100% {

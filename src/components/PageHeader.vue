@@ -40,7 +40,6 @@ header {
 	flex-direction: column;
 	justify-content: center;
 	width: 100vw;
-	height: 100vh;
 	overflow: hidden;
 	min-height: 800px;
 	max-height: 1200px;
@@ -62,6 +61,7 @@ header {
 	font-size: calc((72/905) * 100vw + (1272/181) * 1px);
 	color: #444;
 	text-transform: uppercase;
+	min-height: 400px;
 }
 
 .animated-text {
@@ -107,14 +107,15 @@ header {
 	color: white;
 	z-index: 1;
 	font-weight: 100;
+	padding-bottom: 50px;
 }
 
 .secondary::after {
 	content: '';
 	position: absolute;
 	width: 150%;
-	height: 110%;
-	top: -10%;
+	height: 100%;
+	top: 0;
 	left: 100%;
 	background-color: rgba(50, 50, 255, .5);
 	z-index: 0;
@@ -126,21 +127,22 @@ header {
 .subtitle, .description {
 	position: relative;
 	z-index: 1;
-	width: 60%;
+	width: 80%;
 }
 
 .subtitle {
-	font-size: calc((24/905) * 100vw + (1272/181) * 1px);
+	font-size: calc((62/905) * 100vw + (1272/181) * 1px);
 	text-transform: uppercase;
 }
 
 .description {
-	font-size: calc((14/905) * 100vw + (1272/181) * 1px);
+	font-size: calc((42/905) * 100vw + (1272/181) * 1px);
 }
 
 @media (min-width: 600px) {
 	header {
 		flex-direction: row;
+		height: 100vh;
 	}
 
 	.primary {
@@ -148,7 +150,21 @@ header {
 	}
 
 	.secondary::after {
-		border-bottom-left-radius: 30%;
+		border-bottom-left-radius: 20%;
+		top: -10%;
+	}
+
+	.subtitle, .description {
+		width: 70%;
+	}
+
+	.subtitle {
+		font-size: calc((24/905) * 100vw + (1272/181) * 1px);
+		text-transform: uppercase;
+	}
+
+	.description {
+		font-size: calc((14/905) * 100vw + (1272/181) * 1px);
 	}
 }
 
