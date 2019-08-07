@@ -1,27 +1,27 @@
 <template>
-<div class="sentiment-result">
+<div id="sentiment-result">
 	<div v-if=sentiment.loading class="loading-sentiment">Grabbing Data...</div>
 	<div class="results-container" v-else>
 		<div class="result-summary">
 			{{ summary }}
 		</div>
 		<div class="perc-results">
-			<div class="sentiment-result" id="neg-sentiment">
+			<div class="perc-result" id="neg-sentiment">
 				<div class="sentiment-result-perc">{{ negSentiment }}%</div>
 				<div class="sentiment-result-label">Negative</div>
 			</div>
-			<div class="sentiment-result" id="neutral-sentiment">
+			<div class="perc-result" id="neutral-sentiment">
 				<div class="sentiment-result-perc">{{ neutralSentiment }}%</div>
 				<div class="sentiment-result-label">Neutral</div>
 			</div>
-			<div class="sentiment-result" id="pos-sentiment">
+			<div class="perc-result" id="pos-sentiment">
 				<div class="sentiment-result-perc">{{ posSentiment }}%</div>
 				<div class="sentiment-result-label">Positive</div>
 			</div>
 		</div>
 		<div class="subjectivity-results">
 			<div class="sentiment-result-subjectivity">{{ subjectivity }}%</div>
-			<div class="sentiment-result-subjectivity-label">Subjectivity</div>
+			<div class="sentiment-result-subjectivity-label">Subjective</div>
 		</div>
 	</div>
 </div>
@@ -69,6 +69,11 @@ export default {
 </script>
 
 <style scoped>
+
+#sentiment-result {
+	min-height: 400px;
+}
+
 .loading-sentiment {
 	font-size: 32px;
 	margin-bottom: 40px;
@@ -77,7 +82,7 @@ export default {
 }
 
 .result-summary {
-	font-size: 35px;
+	font-size: 42px;
 	margin-bottom: 20px;
 }
 
@@ -89,7 +94,7 @@ export default {
 	flex-wrap: wrap;
 }
 
-.sentiment-result {
+.perc-result {
 	display: flex;
 	flex-direction: column;
 }
@@ -116,15 +121,15 @@ export default {
 .sentiment-result-subjectivity-label {}
 
 #neg-sentiment .sentiment-result-perc {
-	color: red;
+	color: rgba(255, 10, 10, .5);
 }
 
 #neutral-sentiment .sentiment-result-perc {
-	color: gray;
+	color: rgba(25, 25, 25, .3);
 }
 
 #pos-sentiment .sentiment-result-perc {
-	color: green;
+	color: rgba(75, 200, 75, .8);
 }
 
 @keyframes pulse {

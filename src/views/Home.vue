@@ -22,7 +22,6 @@ export default {
 	async mounted() {
 		try{
 			const { data } = await ApiService.get();
-			console.log('data', data);
 			this.sentiment = data;
 		}catch(err){
 			console.log(err);
