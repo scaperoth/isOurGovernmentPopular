@@ -51,17 +51,23 @@ header {
 	width: 100%;
 }
 
+.primary {
+	display: flex;
+	flex-direction: column;
+	min-height: 600px;
+}
+
 .title {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	width: 80%;
-	height: 100%;
+	width: 100%;
 	margin: 0 auto;
-	font-size: calc((72/905) * 100vw + (1272/181) * 1px);
+	height: 100%;
+	font-size: calc((120/905) * 100vw + (1272/181) * 1px);
 	color: #444;
 	text-transform: uppercase;
-	min-height: 400px;
+	min-height: 700px;
 }
 
 .animated-text {
@@ -147,6 +153,12 @@ header {
 
 	.primary {
 		text-align: left;
+	}
+
+	.title {
+		width: 80%;
+		height: 100%;
+		font-size: calc((72/905) * 100vw + (1272/181) * 1px);
 	}
 
 	.secondary::after {
