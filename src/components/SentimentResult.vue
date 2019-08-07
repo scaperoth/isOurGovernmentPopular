@@ -74,6 +74,11 @@ export default {
 	min-height: 400px;
 }
 
+.results-container {
+	width: 80%;
+	margin: 0 auto;
+}
+
 .loading-sentiment {
 	font-size: 32px;
 	margin-bottom: 40px;
