@@ -54,7 +54,7 @@ header {
 .primary {
 	display: flex;
 	flex-direction: column;
-	min-height: 600px;
+	min-height: 500px;
 }
 
 .title {
@@ -67,7 +67,7 @@ header {
 	font-size: calc((120/905) * 100vw + (1272/181) * 1px);
 	color: #444;
 	text-transform: uppercase;
-	min-height: 700px;
+	min-height: 500px;
 }
 
 .animated-text {
